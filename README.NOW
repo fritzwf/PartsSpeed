@@ -1,0 +1,86 @@
+PartSpeed Terminal Program.   v0.3
+
+
+The first thing you should do is create a directory called
+something like PSPEED on your hard drive.  This can be done
+like this:
+
+C:\>MD PSPEED
+
+After you have done this you should copy all the files from the
+distribution file into this new directory.
+
+The distribution file should contain the following files:
+
+EGAVGA.BGI
+HERC.BGI
+SANS.CHR
+TERMPARM.DAT
+README.NOW
+PSETUP.EXE
+PSPEED.EXE
+SHOWTERM.EXE
+
+Copyright 1996 Fritz Feuerbacher All Rights Reserved.
+
+******************** DISCLAIMER *********************************************
+
+Fritz Feuerbacher disclaims all warranties as to this software,
+whether express or implied, including without limitation any implied
+warranties of merchantability, fitness for a particular purpose, functionality,
+data integrity or protection.  I take no responsibilty for any loss of
+data or value of any kind through the use of this program.
+
+******************************************************************************
+
+**** INFO ABOUT ME AND THE PROGRAM ****
+
+Thank you for downloading the PartSpeed terminal program.
+The program is in the developmental stage but is usable.  I use this
+program at my business, Parts Warehouse Inc., if your interested in
+using it then you are obviously an AC-Delco distributor.
+
+If you try this program and you continue to use it, you must send me
+a check or money order for $25.00.  After I receive your payment I
+will give you access to the latest registered version of the program
+on my BBS system.  I plan to continually enhance this program for
+a long time to come.
+
+If your interested in a program that searches, reads, and displays the part
+numbers contained in the AC-Delco ALL-LINES part records which are
+distributed on 3-1/2" floppy disks, I've created one.  This program is
+also in continual development.  If you would like a copy, please leave
+me email on my BBS or via TELEMAIL at A.923423 .
+
+If you have any questions or suggestions on improving the program
+please contact me via Telemail: A.923423
+or the Internet: feuerbac@cs.ucf.edu
+and I will be glad to try to help.
+
+****  OPERATING THE PROGRAM ****
+
+The program called PSETUP.EXE should be run first.  This program is used
+to setup your terminal preferences like your local partspeed phone number,
+your account number and password, etc.  If you are using a high speed modem,
+like a 14.4k or higher, I suggest you include in your modem init string the
+command to slow it down to 1200 baud.  I have included a modem string that
+is set to properly initialize a Zoom v.32bis 14.4K modem.  This string is
+already in the dat file that contains your settings and you will see it when
+you run the program called PSETUP.EXE.  If this modem initialization string
+is not correct for your particular modem, look in your modem's owners manual
+and see what you should have to slow it down to 1200 or 2400 baud.  This will
+ensure the proper functioning of the PartSpeed terminal.  You will only need
+to run PSETUP.EXE once to setup your terminal preferences.  If you change
+your password every month then you'll need to run the PSETUP.EXE once a
+month to change your sign-on password.  This is a good idea since your
+PartSpeed account is a critical link between you and AC-Delco!
+
+The next step after you run the PSETUP.EXE program is to run PSPEED.EXE .
+This is the actual PartSpeed Terminal program.  This program will
+automatically dial your local PartSpeed telephone number and log you
+on to the system.  After you succesfully logon, you are ready to conduct
+your PartSpeed business as usual.  The terminal is self explanatory and
+very easy to use.  I hope you find it useful.
+
+The program called SHOWTERM.EXE simply displays your current
+settings that you entered using PSETUP.EXE.

@@ -1,0 +1,10 @@
+DEFINITION MODULE GetInit;
+
+EXPORT QUALIFIED InitString, GetModemStuff;
+
+PROCEDURE InitString( VAR Str : ARRAY OF CHAR );
+
+PROCEDURE GetModemStuff(VAR number, logonid, initstr, port,
+                                    baud, setting : ARRAY OF CHAR) : BOOLEAN;
+
+END GetInit.

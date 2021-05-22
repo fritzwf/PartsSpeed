@@ -1,0 +1,59 @@
+IMPLEMENTATION MODULE GetInit;
+
+FROM ASCII IMPORT EOL;
+FROM MyLib IMPORT ReadStrEOLFS;
+FROM FileSystem IMPORT Lookup, SetPos, WriteChar, Close, Delete, Rename,
+                       Response, GetPos, Length, ReadChar, ReadNBytes, File;
+
+PROCEDURE InitString( VAR Str : ARRAY OF CHAR );
+
+VAR  i : CARDINAL;
+
+BEGIN
+
+  FOR i := 0 TO HIGH(Str) DO
+     Str[i] := " ";
+   END (* for *);
+
+END InitString;
+
+PROCEDURE GetModemStuff(VAR number, logonid, initstr, port,
+                                    baud, setting : ARRAY OF CHAR) : BOOLEAN;
+
+VAR
+            file : File;
+            i, j : CARDINAL;
+BEGIN
+
+        Lookup( file, "TERMPARM.INI", FALSE );
+        IF (file.res = done) THEN
+            FOR i := 0 TO 12 DO
+             ReadChar( file, logonid[i] );
+             j := ORD(logonid[i]);
+             j := (j DIV 2);
+             logonid[i] := CHR(j);
+             END (* for *);
+            FOR i := 0 TO 13 DO
+             ReadChar( file, number[i] );
+             END (* for *);
+            FOR i := 0 TO 43 DO
+             ReadChar( file, initstr[i] );
+             END (* for *);
+            FOR i := 0 TO 3 DO
+               ReadChar( file, port[i] );
+              END (* for *);
+            FOR i := 0 TO 3 DO
+               ReadChar( file, baud[i] );
+              END (* for *);
+            FOR i := 0 TO 2 DO
+               ReadChar( file, setting[i] );
+             END (* for *);
+            Close( file );
+          RETURN TRUE;
+       ELSE
+          RETURN FALSE;
+       END (* if *)
+
+END GetModemStuff;
+
+END GetInit.
